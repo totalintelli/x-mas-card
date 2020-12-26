@@ -27,6 +27,8 @@
             background-position: center;
 
             margin: 200px auto 0px auto;
+
+            cursor: pointer;
         }
 
         .envelope-message {
@@ -110,11 +112,18 @@
             }
         }
     </style>
+
+    <script>
+        function open_letter() {
+            document.getElementsByClassName("letter-close")[0].style.display = 'none'
+            document.getElementsByClassName("letter-open")[0].style.display = 'block'
+        }
+    </script>
 </head>
 
 <body>
     <div class="letter-close">
-        <div class="envelope"></div>
+        <div class="envelope" onclick="open_letter()"></div>
         <h2 class="envelope-message">봉투를 열어봐!</h2>
     </div>
 
